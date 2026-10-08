@@ -1,9 +1,0 @@
-test the Subscribe request
-
-
-1- Add a nerw collection, name it (Subscribe)
-2-add a new request, name it (Subscribe), select ( POST ) , add the URL: (http://localhost:9000/api/subscribe), 
-select Body then raw then add this: 
- {
-"email": "hi@example.com"
-}

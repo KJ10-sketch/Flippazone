@@ -1,6 +1,0 @@
-Test the upload request
-
-1- create a new collection
-2-Name it (Upload)
-3-Add a request, Name it (create). this is a POST request. ADD the URL (http://localhost:9000/api/upload) go to Headers add (Authorization) header in the key. Select the body then select the( From Data) key will be (image) type will be a file . in thew value select any image to upload
-then send the request after that you should the image aURL in the response with 200 response

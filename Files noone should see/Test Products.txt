@@ -1,7 +1,0 @@
-Test Products
-
-1- Add a new collection
-name it (Admin Products)
-Add a new request, Name it (Products). URL:  http://localhost:9000/api/admin/products. The go to header
-add Auth key 
-then send the request
