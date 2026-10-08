@@ -1,0 +1,63 @@
+Test the checkout routes
+
+1- Add a new collection 
+ - name it checkout
+add a new request and name the new request (Create) this will be a (POST) request and the URL will:
+http://localhost:9000/api/checkout. Add the header for authorization from login(copy the token) after setting up the header. Select the body then raw inside it add this:
+{
+             "checkoutItems": [
+                  {
+             	"productId":  "Here Paste any ID",
+	"name": "Classic  T-shirts",
+	"image ": "https://picsum.photos./seed/denim1/500/500",
+	"price" : 19
+                }
+                ],
+          "shippingAdress: {
+             "address" : "123 street",
+             "city: "New York",
+             "postaCode": 10001,
+              "country": "USA"
+             },
+	"paymentMethod": "Paypal",
+	"totalPrice" : 19	
+}
+
+
+
+
+The Send the request we will get 201 response which mean we are  able to create the checkout session for the user
+After that check the database for the entry
+*****
+Add another request for the Route and name it (Pay) it will be a POST request
+the URL will be: http://localhost:9000/api/checkout/:id/Pay
+then copy the checkout id form the database
+and paste it in Params > params variables
+select key: id and value is (id we jus copied from the database)
+Also Add the header
+key: authorization
+value: paste the token
+and in the body got to raw and paste this.
+{
+    "paymentStatus":  "paid",
+    "paymentDetails": {
+     "transactionId": "txn_123456789",
+     "paymentGateway": "Paypal",
+     "amount": 19,
+     "currency": "USD"
+    }
+}
+
+
+Send the request
+now we will get 200 response with the updated checkout entry
+********************************
+NOW duplicate the Pay request
+and rename it  (Finalize) and also add finalize in the URl instead of pay 
+now change th type of the request to (POST) and delete the body
+
+Send the request
+we will see 201 response
+refresh the mongoDb atlas page 
+then we can see a new order gets created
+at this stage we will need to go back to the video from  the hour (10:55) to (10:58) 

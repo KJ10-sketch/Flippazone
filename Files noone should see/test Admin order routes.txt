@@ -1,0 +1,31 @@
+test Admin order routes
+
+1- Add a new collection (Admin Orders)
+2- Add a new request
+3- Name it (Orders)
+4- Select (GET)
+5- then go to header, add a the auth
+6- URL: http://localhost:9000/api/admin/orders
+7- Send the request 
+
+
+8- Duplicate the request (Admin Orders)
+9- Name it (Update  Status)
+10- Select (PUT)
+11- URL: http://localhost:9000/api/admin/orders/:id
+12- then Params > path variables:  paste the ID
+13- then body . and paste this 
+{
+   "status": "Delivered"
+}
+
+14 - send the request
+
+
+
+
+15- Duplicate the request (Update  Status)
+16- rename it to (Delete)
+17- Select (DELETE)
+18-URL: http://localhost:9000/api/admin/orders/:id
+19- Send the request. Now you will see the output

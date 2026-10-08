@@ -1,0 +1,16 @@
+///the name of the database:  
+flippazone
+
+******************************
+//Copy and save database user credentials
+//Username
+khalifaejned10_db_user
+
+///Password:
+N6GEjKzdrg2qIZVt
+**********************************************
+  ///Add your connection string into your application code:
+
+
+mongodb+srv://<db_username>:N6GEjKzdrg2qIZVt@cluster0.hgw5sbg.mongodb.net/?appName=Cluster0
+**************************************************************
